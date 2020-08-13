@@ -1,4 +1,4 @@
-def pipelineVersion='1.1.3'
+def pipelineVersion='1.1.4'
 println "Pipeline version: ${pipelineVersion}"
 /*
  * This is a vanilla Jenkins pipeline that relies on the Jenkins kubernetes plugin to dynamically provision agents for
@@ -187,6 +187,9 @@ spec:
         - name: HOME
           value: /home/devops
       envFrom:
+        - configMapRef:
+            name: gitops-cd-secret
+            optional: true
         - configMapRef:
             name: gitops-repo
             optional: true
