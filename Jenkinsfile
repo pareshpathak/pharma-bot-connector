@@ -1,4 +1,4 @@
-def pipelineVersion='1.1.4'
+def pipelineVersion='1.1.3'
 println "Pipeline version: ${pipelineVersion}"
 /*
  * This is a vanilla Jenkins pipeline that relies on the Jenkins kubernetes plugin to dynamically provision agents for

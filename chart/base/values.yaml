@@ -10,7 +10,7 @@ image:
   repository: replace
   tag: replace
   pullPolicy: IfNotPresent
-  port: 3000
+  port: 9080
 
 nameOverride: ""
 fullnameOverride: ""
@@ -36,6 +36,9 @@ ingress:
 
 #  tlsSecretName: ""
 
+jaegerConfigName: jaeger-config
+jaegerSecretName: jaeger-access
+
 vcsInfo:
   repoUrl: ""
   branch: ""
@@ -44,4 +47,4 @@ partOf: ""
 
 connectsTo: ""
 
-runtime: ""
+runtime: spring
